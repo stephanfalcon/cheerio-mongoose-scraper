@@ -3,9 +3,9 @@ const mongoose = require("mongoose")
 const Schema = mongoose.Schema
 
 var articleSchema = new Schema({
-    title: {type: String},
-    description: {type: String},
-    link: {type: String},
+    title: {type: String,required:true},
+    description: {type: String,required:true},
+    link: {type: String,required:true},
 
     note: {
     type: Schema.Types.ObjectId,

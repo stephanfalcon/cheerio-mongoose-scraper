@@ -1,0 +1,18 @@
+const mongoose = require("mongoose")
+
+const db = require("../models/articles.js") // need to be changed and index needs to be added to models
+const scraper = require("../scraper/scraper.js")
+mongoose.connect("mongodb://localhost/news", { useNewUrlParser: true });
+
+const orm = {
+    find: function(col){
+        db.find({},function(err,res){
+            console.log(res)
+        })
+    },
+    scrape: function(){
+        scraper()
+    }
+}
+
+module.exports = orm
