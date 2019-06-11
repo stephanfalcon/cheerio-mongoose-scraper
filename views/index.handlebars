@@ -2,5 +2,12 @@
 {{#each articles}}
 <h3>{{title}}</h3>
 <p>{{description}}</p>
-<a href="{{link}}">link</a>
+<button data-link="{{link}}" class="link">link</button>
 {{/each}}
+
+<script>
+
+    $(".link").on("click",function(res){
+        window.location = `https://www.nytimes.com${$(this).data("link")}`
+    })
+</script>
