@@ -5,9 +5,9 @@ const scraper = require("../scraper/scraper.js")
 mongoose.connect("mongodb://localhost/news", { useNewUrlParser: true });
 
 const orm = {
-    find: function(col){
+    find: function(col,cb){
         db.find({},function(err,res){
-            console.log(res)
+            cb(res)
         })
     },
     scrape: function(){

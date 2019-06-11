@@ -1,13 +1,20 @@
 const express = require("express")
 const router = express.Router()
-const mongoose = require("mongoose")
+// const mongoose = require("mongoose")
 const scraper = require("../scraper/scraper")
 const orm = require("../controller/dbcoms")
 
 router.get("/",function(req,res){
-    res.render("index")
+    
+    orm.find(0,function(data){
+        var hbsObject = {
+            articles: data
+        };
+        res.render("index",hbsObject)
+    })
 
-    orm.find()
+    
+    
 })
 
 router.get("/scraper",function(req,res){
