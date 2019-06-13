@@ -12,13 +12,22 @@ router.get("/",function(req,res){
         };
         res.render("index",hbsObject)
     })
-
-    
-    
 })
 
 router.get("/scraper",function(req,res){
     scraper()
+})
+
+router.get("/comments",function(req,res){
+
+})
+
+router.post("/comments",function(req,res){
+
+})
+
+router.put("/comments",function(req,res){
+
 })
 
 module.exports = router

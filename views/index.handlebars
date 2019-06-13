@@ -1,8 +1,16 @@
-<h1>articles</h1>
+<h1 >articles</h1>
+
 {{#each articles}}
-<h3>{{title}}</h3>
-<p>{{description}}</p>
-<button data-link="{{link}}" class="link">link</button>
+<div class="art-info">
+    <hr>
+    <h3>{{title}}</h3>
+    <p>{{description}}</p>
+    <button data-link="{{link}}" class="link">link</button>
+    <button class="comments-btn">comments</button>
+    <div class="comments" visibility="false" style="display: none">
+        {{>comments}}
+    </div>
+</div>
 {{/each}}
 
 <script>
@@ -10,4 +18,26 @@
     $(".link").on("click",function(res){
         window.location = `https://www.nytimes.com${$(this).data("link")}`
     })
+    $(".comments-btn").on("click",function(res){
+        {{!-- console.log($(this).parent().children(".comments").css("display")) --}}
+        visibility($(this).parent().children(".comments"))
+    })
+
+    function visibility(elem){
+        if (elem.css("display")=="none"){
+            elem.show()
+        }else{
+            elem.hide()
+        }
+    }
+
+    {{!-- $( "#hider" ).click(function() {
+        $( "span:last-child" ).hide( "fast", function() {
+        // Use arguments.callee so we don't need a named function
+            $( this ).prev().hide( "fast", arguments.callee );
+        });
+    });
+    $( "#shower" ).click(function() {
+        $( "span" ).show( 2000 );
+    }); --}}
 </script>
