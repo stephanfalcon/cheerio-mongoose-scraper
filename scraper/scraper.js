@@ -3,7 +3,7 @@ const axios = require("axios")
 const mongoose = require("mongoose")
 const db = require("../models")
 
-// mongoose.connect("mongodb://localhost/news", { useNewUrlParser: true });
+mongoose.connect("mongodb://localhost/news", { useNewUrlParser: true });
 
 let scraper = function(){
     axios.get("https://www.nytimes.com/section/technology")
