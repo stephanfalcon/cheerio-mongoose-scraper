@@ -1,0 +1,29 @@
+{
+  "name": "cheerio-mongoose-scraper",
+  "version": "1.0.0",
+  "description": "This is a web scraper that uses cheerio and mongoose to allow users to post comments on news articles.",
+  "main": "index.js",
+  "engines": {
+    "node": "10.3.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/stephanfalcon/cheerio-mongoose-scraper.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/stephanfalcon/cheerio-mongoose-scraper/issues"
+  },
+  "homepage": "https://github.com/stephanfalcon/cheerio-mongoose-scraper#readme",
+  "dependencies": {
+    "axios": "^0.19.0",
+    "cheerio": "^1.0.0-rc.3",
+    "express": "^4.17.1",
+    "express-handlebars": "^3.1.0",
+    "mongoose": "^5.6.3"
+  }
+}
