@@ -2,7 +2,7 @@
 const express = require("express");
 const router = require("./routes/routes")
 const exphbs = require("express-handlebars")
-const port = process.env.port || 3500;
+const port = process.env.PORT || 3500;
 
 const app = express();
 app.use(express.urlencoded({extended:true}))
