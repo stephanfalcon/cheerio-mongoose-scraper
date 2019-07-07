@@ -3,8 +3,8 @@ const mongoose = require("mongoose")
 const Schema = mongoose.Schema
 
 const commentSchema = new Schema({
-    comment = {type:String,required:true},
-    date = {type:String,required:true},
+    comment : {type:String,required:true},
+    date : {type:String,required:true},
     
     note: {
     type: Schema.Types.ObjectId,
