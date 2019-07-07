@@ -1,7 +1,7 @@
 const cheerio = require("cheerio")
 const axios = require("axios")
 const mongoose = require("mongoose")
-const db = require("../models/articles.js")
+const db = require("../models")
 
 mongoose.connect("mongodb://localhost/news", { useNewUrlParser: true });
 
@@ -20,7 +20,7 @@ let scraper = function(){
             article.link = $(this).attr("href")
             // console.log(db.articles)
 
-            db.create(article)
+            db.articles.create(article)
                 .then(function(results){
                     console.log(results)
                 }).catch(function(err){

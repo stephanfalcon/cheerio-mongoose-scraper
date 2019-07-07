@@ -13,6 +13,8 @@ const orm = {
     scrape: function(){
         scraper()
     }
+
+    
 }
 
 module.exports = orm
